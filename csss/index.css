@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap');
+
+*{
+	/* background-color: mediumpurple; */
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html, body{
+	height: 100%;
+	margin: 0;
+	background-color: black;
+}
+
+body{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-family: sans-serif;
+}
+
+#bg{
+	width: 100vw;
+	height: 100vh;
+	margin:  0;
+	filter: blur(1px);
+    -webkit-filter: blur(1px);
+    display: block;
+}
+
+.container{
+	color: floralwhite;
+	text-align: center;
+	margin: 0 auto;
+	position: absolute;
+}
+
+@keyframes fade-down { 
+	0%{
+		opacity: 1;
+	}
+
+	100%{
+		opacity: 0;
+	}
+}
+
+.animateMe{
+	animation: fade-down 5s;
+}
+
+.headline span {
+
+	font-weight: normal;
+	font-size: 3.5rem;
+	letter-spacing: .125rem;
+	text-transform: uppercase;
+    color: #fff;
+
+	font-family: "Lexend Deca", sans-serif;
+  	font-optical-sizing: auto;
+  	font-weight: 600;
+  	font-style: normal;
+
+    display: inline-block;
+    animation: animate 10s ease infinite;
+
+}
+
+.headline span:nth-child(1){
+ animation-delay: 0s;
+
+}   
+.headline span:nth-child(2){
+animation-delay: 1s;
+
+}
+.headline span:nth-child(3){
+ animation-delay: 2s;
+
+}
+.headline span:nth-child(4){
+ animation-delay: 3s;
+}
+.headline span:nth-child(5){
+ animation-delay: 4s;
+}
+.headline span:nth-child(6){
+ animation-delay: 5s;
+
+}
+.headline span:nth-child(7){
+ animation-delay: 6s;
+}
+.headline span:nth-child(8){
+ animation-delay: 7s;
+}
+
+.headline span:nth-child(9){
+ animation-delay: 8s;
+}
+
+.headline span:nth-child(10){
+ animation-delay: 9s;
+}
+
+li{
+	display: inline-block;
+	font-size: 1.5rem;
+	list-style-type: none;
+	padding: 1em;
+	text-transform: uppercase;
+}
+
+li span{
+	display: block;
+	font-size: 4.5rem;
+}
+
+#content{
+	display: none;
+}
+
+
+@keyframes animate{
+    0%,100%{
+        color: lightgoldenrodyellow;
+        filter: blur(1px);
+        text-shadow: 0 0 10px #FAEDCD,
+         0 0 20px #FEFAE0,
+          0 0 400px #E9EDC9,
+           0 0 80px #CCD5AE,
+            0 0 120px #F8CBA6,
+             0 0 200px #FFE7CC,
+              0 0 300px #FFFBEB,
+               0 0 400px #EDDBC7;
+    }
+
+    5%,95%{
+        color: #fff;
+        filter: blur(0px);
+        text-shadow: none;
+
+    }
+
+
+}
+
+
+
+@media screen and (max-width: 600px){
+
+	html, body{
+		overflow: hidden;
+	}
+
+	#bg{
+		rotate: 90deg;
+		height: 100%;
+		width: 100vh;
+	}
+
+	.container{
+		rotate: 90deg;
+		height: 100vw;
+		width: 100vh;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+
+
+}
