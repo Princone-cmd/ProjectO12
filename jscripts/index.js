@@ -1,6 +1,3 @@
-var fDura = 15 * 1000;
-var animationEnd = Date.now() + fDura;
-var defaults = { startVelocity: 20, spread: 360, ticks: 60, zIndex: 0,angle: 60, gravity: 0};
 
 function randomInRange(min, max) {
   return Math.random() * (max - min) + min;
@@ -13,7 +10,7 @@ function randomInRange(min, max) {
 	day = hour*24;
 
 	
-	let bday = "July 06,2024 11:13:00",
+	let bday = "July 06,2024 12:29:40",
 	countdown = new Date(bday).getTime(),
 	x=setInterval(function () {
 		let now = new Date().getTime(),
@@ -33,12 +30,12 @@ function randomInRange(min, max) {
 			content = document.getElementById("content");
 
 			headline.innerText = "It's My Birthday";
-			clearInterval(x);
-
-			confetti();
 
 			countdown.style.display = "none";
 			content.style.display = "block";
+			var fDura = 15 * 1000;
+			var animationEnd = Date.now() + fDura;
+			var defaults = { startVelocity: 20, spread: 360, ticks: 60, zIndex: 0,angle: 60, gravity: 0};
 
 			var interval = setInterval(function() {
 				var timeLeft = animationEnd - Date.now();
@@ -53,7 +50,7 @@ function randomInRange(min, max) {
 				confetti({ ...defaults, particleCount, origin: { x: randomInRange(0.7, 0.9), y: Math.random() - 0.2 } });
 			}, 250);
 
-			// .then(() => console.log("DONE"));
+			clearInterval(x);
 			
 			/*document.getElementById("bodyID").classList.toggle('animateMe');
 			
