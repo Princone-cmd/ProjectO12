@@ -10,7 +10,7 @@ function randomInRange(min, max) {
 	day = hour*24;
 
 	
-	let bday = "July 06,2024 18:30:00",
+	let bday = "July 06,2024 21:16:00",
 	countdown = new Date(bday).getTime(),
 	x=setInterval(function () {
 		let now = new Date().getTime(),
@@ -27,20 +27,34 @@ function randomInRange(min, max) {
 			let 
 			headline = document.getElementById("headline"),
 			countdown = document.getElementById("countdown"),
+			proceed = document.getElementById("proceedToPresentation"),
 			content = document.getElementById("content");
 
-			headline.innerText = "It's My Birthday";
+			headline.innerText = "Happy Birthday\nCharan Cherry";
+			headline.style.fontSize = "450%";
+			headline.classList.add("type");
 
 			countdown.style.display = "none";
 			content.style.display = "block";
+			proceed.disabled = true; 
+
 			var fDura = 15 * 1000;
 			var animationEnd = Date.now() + fDura;
-			var defaults = { startVelocity: 20, spread: 360, ticks: 60, zIndex: 0,angle: 60, gravity: 0};
+			var defaults = { startVelocity: 20, spread: 360, ticks: 60, zIndex: 0, gravity: 0.1};
 
+			let i = 60;
 			var interval = setInterval(function() {
+				
 				var timeLeft = animationEnd - Date.now();
+				proceed.innerText = "Wait ("+i+")";
+				i = i-1;
 
 				if (timeLeft <= 0) {
+					proceed.disabled = false;
+					proceed.innerText = "Continue";
+					proceed.onclick = function(){
+						location.replace("presentation.html");
+					};
 					return clearInterval(interval);
 				}
 
