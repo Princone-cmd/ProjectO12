@@ -1,3 +1,11 @@
+var fDura = 15 * 1000;
+var animationEnd = Date.now() + fDura;
+var defaults = { startVelocity: 20, spread: 360, ticks: 60, zIndex: 0,angle: 60, gravity: 0};
+
+function randomInRange(min, max) {
+  return Math.random() * (max - min) + min;
+}
+
 (function () {
 	const second = 1000;
 	minute = second*60;
@@ -5,7 +13,7 @@
 	day = hour*24;
 
 	
-	let bday = "July 15,2024 00:00:00",
+	let bday = "July 06,2024 11:13:00",
 	countdown = new Date(bday).getTime(),
 	x=setInterval(function () {
 		let now = new Date().getTime(),
@@ -27,17 +35,34 @@
 			headline.innerText = "It's My Birthday";
 			clearInterval(x);
 
+			confetti();
+
 			countdown.style.display = "none";
 			content.style.display = "block";
 
+			var interval = setInterval(function() {
+				var timeLeft = animationEnd - Date.now();
+
+				if (timeLeft <= 0) {
+					return clearInterval(interval);
+				}
+
+				var particleCount = 50 * (timeLeft / fDura);
+				// since particles fall down, start a bit higher than random
+				confetti({ ...defaults, particleCount, origin: { x: randomInRange(0.1, 0.3), y: Math.random() - 0.2 } });
+				confetti({ ...defaults, particleCount, origin: { x: randomInRange(0.7, 0.9), y: Math.random() - 0.2 } });
+			}, 250);
+
+			// .then(() => console.log("DONE"));
+			
 			/*document.getElementById("bodyID").classList.toggle('animateMe');
 			
   			location.replace("presentation.html");*/
 		}
 
 
-	},0);
+	},0);}());
 
-}());
+
 
 
