@@ -11,7 +11,6 @@ html, body{
 	height: 100%;
 	margin: 0;
 	background-color: black;
-	overflow: hidden;
 }
 
 body{
@@ -28,6 +27,13 @@ body{
 	filter: blur(1px);
     -webkit-filter: blur(1px);
     display: block;
+    cursor: default;
+    /* -webkit-touch-callout: none; */
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 .container{
@@ -50,9 +56,25 @@ body{
 .animateMe{
 	animation: fade-down 5s;
 }
+.headline{
 
+    cursor: default;
+    /* -webkit-touch-callout: none; */
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
 .headline span {
 
+    cursor: default;
+    /* -webkit-touch-callout: none; */
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 	font-weight: normal;
 	font-size: 3.5rem;
 	letter-spacing: .125rem;
@@ -105,8 +127,15 @@ animation-delay: 1s;
 .headline span:nth-child(10){
  animation-delay: 9s;
 }
-
 li{
+
+    cursor: default;
+    /* -webkit-touch-callout: none; */
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 	display: inline-block;
 	font-size: 1.5rem;
 	list-style-type: none;
@@ -148,7 +177,62 @@ li span{
 
 }
 
+.headline.type{
+	width: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+	animation: 
+		typing 2s steps(28);
+}
 
+.proceed{
+	margin-top: 20px;
+	padding: 10px;
+	border-radius: 5px;
+	background-color: navy;
+	color: white;
+	font-family: "Lexend Deca", sans-serif;
+  	font-optical-sizing: auto;
+  	font-weight: 600;
+  	font-style: normal;
+  	cursor: pointer;
+
+}
+
+/* HTML: <div class="loader"></div> */
+.loader {
+  width: 120px;
+  height: 22px;
+  border-radius: 20px;
+  color: #514b82;
+  border: 2px solid;
+  position: relative;
+}
+
+.loader::before {
+  content: "";
+  position: absolute;
+  margin: 2px;
+  inset: 0 100% 0 0;
+  border-radius: inherit;
+  background: currentColor;
+  animation: l6 15s;
+}
+
+@keyframes l6 {
+    100% {inset:0}
+}
+
+
+@keyframes typing{
+	from {
+		width: 0;
+	}
+
+	1%,99%{
+		border-right: 2px solid;
+	}
+}
 
 @media screen and (max-width: 600px){
 
