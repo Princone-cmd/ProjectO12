@@ -182,7 +182,7 @@ li span{
 	white-space: nowrap;
 	overflow: hidden;
 	animation: 
-		typing 2s steps(28);
+		typing 5s steps(28);
 }
 
 .proceed{
