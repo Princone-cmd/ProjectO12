@@ -9,6 +9,7 @@ function randomInRange(min, max) {
 	hour = minute*60;
 	day = hour*24;
 
+ document.getElementById("container").style.width = "100%";
 	
 	let bday = "July 08,2024 17:50:00",
 	countdown = new Date(bday).getTime(),
