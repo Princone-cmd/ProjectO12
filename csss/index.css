@@ -210,13 +210,13 @@ li span{
 	background-color: #005452;
 	box-shadow: #555;
 	border:  none;
-	opacity: 0;
 	color: white;
 	font-family: "Lexend Deca", sans-serif;
   	font-optical-sizing: auto;
   	font-size: 1rem;
   	font-weight: 600;
   	font-style: normal;
+  	display: none;
   	cursor: pointer;
   	box-shadow: 2px 2px 5px lightblue;
 }
@@ -278,10 +278,7 @@ li span{
 }
 
 @keyframes typing{
-	.proceed{
-		opacity: 1;
-	  	animation: fade-in 5s;
-	}
+
 	from {
 		width: 0;
 	}
