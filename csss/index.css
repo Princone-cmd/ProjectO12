@@ -210,6 +210,7 @@ li span{
 	background-color: #005452;
 	box-shadow: #555;
 	border:  none;
+	opacity: 0;
 	color: white;
 	font-family: "Lexend Deca", sans-serif;
   	font-optical-sizing: auto;
@@ -218,7 +219,6 @@ li span{
   	font-style: normal;
   	cursor: pointer;
   	box-shadow: 2px 2px 5px lightblue;
-  	animation: fade-in 5s;
 }
 
 .proceed:hover{
@@ -278,7 +278,10 @@ li span{
 }
 
 @keyframes typing{
-
+	.proceed{
+		opacity: 1;
+	  	animation: fade-in 5s;
+	}
 	from {
 		width: 0;
 	}
