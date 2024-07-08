@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Style+Script&display=swap');
+
 *{
 	/* background-color: mediumpurple; */
 	box-sizing: border-box;
@@ -66,6 +68,7 @@ body{
     -ms-user-select: none;
     user-select: none;
 }
+
 .headline span {
 
     cursor: default;
@@ -149,7 +152,9 @@ li span{
 }
 
 #content{
-	display: none;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 
@@ -179,24 +184,45 @@ li span{
 
 .headline.type{
 	width: 100%;
+	padding-left: 10px;
 	white-space: nowrap;
+	letter-spacing: 5px;
 	overflow: hidden;
+	color: #005452;
+/* 	background:  linear-gradient(darkolivegreen, brown, darkviolet, orange, white, green);
+	-webkit-background-clip: text;
+	background-clip: text;
+	-webkit-text-fill-color: transparent; */
+	text-shadow:
+	    0 0 7px #fff,
+	    0 0 18px #fff;
+	font-family: "Style Script", cursive;
+	font-weight: 600;
+	font-style: normal;
 	animation: 
-		typing 5s steps(28);
+		typing 2s steps(28);
 }
 
 .proceed{
 	margin-top: 20px;
-	padding: 10px;
-	border-radius: 5px;
-	background-color: navy;
+	padding: 15px 35px;
+	border-radius: 25px;
+	background-color: #005452;
+	box-shadow: #555;
+	border:  none;
 	color: white;
 	font-family: "Lexend Deca", sans-serif;
   	font-optical-sizing: auto;
+  	font-size: 1rem;
   	font-weight: 600;
   	font-style: normal;
   	cursor: pointer;
+  	box-shadow: 2px 2px 5px lightblue;
+  	animation: fade-in 5s;
+}
 
+.proceed:hover{
+	box-shadow: none;
 }
 
 /* HTML: <div class="loader"></div> */
@@ -224,7 +250,35 @@ li span{
 }
 
 
+@keyframes fade-in {
+
+	0% {
+		opacity: 0;
+	}
+
+    100% {
+    	opacity: 1;
+    }
+}
+
+.fadeout.animate{
+	opacity: 0;
+	animation: fade-out 5s;
+}
+
+@keyframes fade-out{
+
+	0% {
+		opacity: 1;
+	}
+
+	100%{
+		opacity: 0;
+	}
+}
+
 @keyframes typing{
+
 	from {
 		width: 0;
 	}
@@ -249,7 +303,7 @@ li span{
 	.container{
 		rotate: 90deg;
 		height: 100vw;
-		width: 100vh;
+		width: auto;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;

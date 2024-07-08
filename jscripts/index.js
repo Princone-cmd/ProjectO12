@@ -10,7 +10,7 @@ function randomInRange(min, max) {
 	day = hour*24;
 
 	
-	let bday = "July 07,2024 08:30:00",
+	let bday = "July 08,2024 17:30:00",
 	countdown = new Date(bday).getTime(),
 	x=setInterval(function () {
 		let now = new Date().getTime(),
@@ -46,14 +46,19 @@ function randomInRange(min, max) {
 			var interval = setInterval(function() {
 				
 				var timeLeft = animationEnd - Date.now();
-				proceed.innerText = "Wait ("+i+")";
+				proceed.innerHTML = " ("+i+") Fireworks &#127881";
 				i = i-1;
 
 				if (timeLeft <= 0) {
 					proceed.disabled = false;
-					proceed.innerText = "Continue";
+					proceed.innerHTML = "Go to Next &#x1F382";
 					proceed.onclick = function(){
-						location.replace("presentation.html");
+
+						document.getElementById("bodyID").classList.add("animate");
+
+						setTimeout(() => {location.replace("presentation.html");}, 5000)
+
+						// 
 					};
 					return clearInterval(interval);
 				}
