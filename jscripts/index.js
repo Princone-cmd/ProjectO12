@@ -10,7 +10,7 @@ function randomInRange(min, max) {
 	day = hour*24;
 
 	
-	let bday = "July 08,2024 17:29:20",
+	let bday = "July 08,2024 17:50:00",
 	countdown = new Date(bday).getTime(),
 	x=setInterval(function () {
 		let now = new Date().getTime(),
