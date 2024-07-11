@@ -9,10 +9,12 @@ function randomInRange(min, max) {
 	hour = minute*60;
 	day = hour*24;
 
- document.getElementById("container").style.width = "100vh";
+	document.getElementById("container").style.width = "100vh";
 	
-	let bday = "July 08,2024 19:30:00",
+	let bday = "July 11,2024 18:00:00",
 	countdown = new Date(bday).getTime(),
+
+
 	x=setInterval(function () {
 		let now = new Date().getTime(),
 		distance = countdown - now;
@@ -25,7 +27,7 @@ function randomInRange(min, max) {
 		document.getElementById("bodyID").classList.remove('animateMe');
 
 		if (distance < 0) {
-   document.getElementById("container").style.width = "auto";
+			document.getElementById("container").style.width = "auto";
 			let 
 			headline = document.getElementById("headline"),
 			countdown = document.getElementById("countdown"),
