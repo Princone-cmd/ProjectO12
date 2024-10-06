@@ -1,3 +1,7 @@
+if(window.innerHeight > window.innerWidth){
+  alert("Please use Landscape!");
+}
+
 
 function randomInRange(min, max) {
   return Math.random() * (max - min) + min;
@@ -11,7 +15,7 @@ function randomInRange(min, max) {
 
 	document.getElementById("container").style.width = "100vh";
 	
-	let bday = "July 11,2024 18:00:00",
+	let bday = "October 6,2024 19:12:40",
 	countdown = new Date(bday).getTime(),
 
 
@@ -27,6 +31,7 @@ function randomInRange(min, max) {
 		document.getElementById("bodyID").classList.remove('animateMe');
 
 		if (distance < 0) {
+			document.getElementById("bg").play();
 			document.getElementById("container").style.width = "auto";
 			let 
 			headline = document.getElementById("headline"),

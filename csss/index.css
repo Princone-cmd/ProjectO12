@@ -288,7 +288,17 @@ li span{
 	}
 }
 
-@media screen and (max-width: 600px){
+@media screen and (max-width: 800px){
+
+	.container {
+		font-size: 0.7rem;
+	}
+
+}
+
+
+
+/* @media screen and (max-width: 600px){
 
 	html, body{
 		overflow: hidden;
@@ -311,3 +321,4 @@ li span{
 
 
 }
+ */
