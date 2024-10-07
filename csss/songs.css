@@ -21,7 +21,9 @@ body{
 .mainContainer{
 	width: 100vw;
 	height: 100vh;
-	background-image: url("../images/Joe.jpg");
+	background: #614385;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #516395, #614385);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #516395, #614385); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 	background-size: cover;
 	background-repeat: no-repeat, no-repeat;
 	background-position: right, left;
@@ -236,13 +238,12 @@ body{
 	width: 40px;
 	height: 40px;
 	margin: 20px;
-	background: #fff;
 	display: inline-flex;
 	align-items: center;
 	justify-content: center;
 	border-radius: 50%;
-	color: #005452;
-	box-shadow: 0 10px 20px rgba(255, 26, 26, 0.22);
+	color: lightgrey;
+	transform: scale(2.0);
 	cursor: pointer;
 }
 
@@ -280,7 +281,7 @@ body{
 	text-decoration: underline;
 }
 
-/* @media screen and (max-width: 750px){
+@media screen and (max-width: 750px){
 	html, body{
 		overflow: hidden;
 	}
@@ -344,4 +345,3 @@ body{
     	font-size: 10px;
 	}
 }
- */

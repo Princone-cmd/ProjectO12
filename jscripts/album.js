@@ -41,7 +41,6 @@ function closeBook(isAtBeginning) {
 
 function goNextPage() {
     if(currentLocation < maxLocation) {
-            console.log(currentLocation);
         switch(currentLocation) {
             case 1:
                 openBook();

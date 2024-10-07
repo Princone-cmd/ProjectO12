@@ -60,7 +60,9 @@ button{
   	font-weight: 600;
   	font-style: normal;
   	cursor: pointer;
-	background-color: #005452;
+	background: #2b5876;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #4e4376, #2b5876);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #4e4376, #2b5876); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 	padding: 10px;
 	border-radius: 10px;
 
@@ -107,7 +109,9 @@ button:hover{
 		width: auto;
 		font-size: 0.7rem;
 		transform: rotateZ(90deg) translateX(50%);
-		background-color: #005452;
+		background: #2b5876;  /* fallback for old browsers */
+		background: -webkit-linear-gradient(to right, #4e4376, #2b5876);  /* Chrome 10-25, Safari 5.1-6 */
+		background: linear-gradient(to right, #4e4376, #2b5876); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 		padding: 10px;
 		border-radius: 10px;
 		opacity: 0.5;
