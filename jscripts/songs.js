@@ -238,5 +238,5 @@ function PlayCurrentIndex(index){
 }
 
 function SkipToNextSlide(){
-    location.replace("../message.html");
+    location.replace("message.html");
 }

@@ -16,8 +16,11 @@ nextBtn.addEventListener("click", goNextPage);
 
 // Business Logic
 let currentLocation = 1;
-let numOfPapers = 5;
+let numOfPapers = 6;
 let maxLocation = numOfPapers + 1;
+document.getElementById("skipBtn").onclick = function(){
+    location.replace("songs.html");
+}
 
 function openBook() {
     book.style.transform = "translateX(50%)";
@@ -38,6 +41,7 @@ function closeBook(isAtBeginning) {
 
 function goNextPage() {
     if(currentLocation < maxLocation) {
+            console.log(currentLocation);
         switch(currentLocation) {
             case 1:
                 openBook();
@@ -47,28 +51,35 @@ function goNextPage() {
             case 2:
                 paper1.classList.add("flipped");
                 paper1.style.zIndex = 2;
+                document.querySelector("#f1 video").pause();
                 break;
             case 3:
                 paper2.classList.add("flipped");
                 paper2.style.zIndex = 3;
+                document.querySelector("#f2 video").pause();
                 break;
             case 4:
                 paper3.classList.add("flipped");
                 paper3.style.zIndex = 4;
+                document.querySelector("#f3 video").pause();
                 break;
             case 5:
                 paper4.classList.add("flipped");
                 paper4.style.zIndex = 5;
+                document.querySelector("#f4 video").pause();
                 break;
             case 6:
                 paper5.classList.add("flipped");
                 paper5.style.zIndex = 6;
+                document.querySelector("#f5 video").pause();
                 closeBook(false);
                 break;
             default:
                 throw new Error("unkown state");
         }
         currentLocation++;
+
+
     }
 }
 
@@ -79,24 +90,29 @@ function goPrevPage() {
                 closeBook(true);
                 paper0.classList.remove("flipped");
                 paper0.style.zIndex = 6;
+                document.querySelector("#f1 video").pause();
                 break;
             case 3:
                 paper1.classList.remove("flipped");
                 paper1.style.zIndex = 5;
+                document.querySelector("#f2 video").pause();
                 break;
             case 4:
                 paper2.classList.remove("flipped");
                 paper2.style.zIndex = 4;
+                document.querySelector("#f3 video").pause();
                 break;
             case 5:
                 paper3.classList.remove("flipped");
                 paper3.style.zIndex = 3;
+                document.querySelector("#f4 video").pause();
                 break;
             case 6:
                 paper4.classList.remove("flipped");
                 paper4.style.zIndex = 2;
+                document.querySelector("#f5 video").pause();
                 break;
-            case 5:
+            case 7:
                 openBook();
                 paper5.classList.remove("flipped");
                 paper5.style.zIndex = 1;
