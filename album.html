@@ -1,42 +1,109 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta content="width=device-width, initial-scale=1.0" name="viewport">
-	<title>Project O12 Album</title>
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Geologica:wght@300&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"> 
-	<link rel="stylesheet" href="csss/album.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book</title>
+    <link rel="stylesheet" href="csss/album.css">
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.4.2/uicons-solid-rounded/css/uicons-solid-rounded.css'>
+    <script src="jscripts/album.js" defer></script>
+    <script src="https://kit.fontawesome.com/b0f29e9bfe.js" crossorigin="anonymous"></script>
 </head>
 <body>
-	<div class="container">
+    <!-- Previous Button -->
+    <button id="prev-btn">
+        <i class="fi fi-sr-caret-left"></i>
+    </button>
 
-		<div class="album" id="album">
-			<ul class="album_list">
-				<li class="album_item1" id="album_item1"><div class="album_texts"><h1>Scroll Down</h1><h3></h3></div></li>
 
-				<li class="album_item"><img src="images/Joe.jpg" alt="img" class="album_img"><div class="album_texts"><h2>Hello Welcome 123</h2><h3>hi this is me</h3></div></li>
+    <!-- Book -->
+    <div id="book" class="book">
 
-				<li class="album_item"><div class="album_texts"><h2>Hello Welcome 123</h2><h3>hi this is me</h3></div><img src="images/Joe.jpg" alt="img" class="album_img"></li>
+        <!-- Paper Cover -->
+        <div id="p0" class="paper">
+            <div class="front">
+                <div id="f1" class="front-content">
+                    <h1>Cover</h1>
+                </div>
+            </div>
+            <div class="back">
+                <div id="b1" class="back-content">
+                    <h1>Back 1</h1>
+                </div>
+            </div>
+        </div>
 
-				<li class="album_item"><img src="images/Joe.jpg" alt="img" class="album_img"><div class="album_texts"><h2>Hello Welcome 123</h2><h3>hi this is me</h3></div></li>
+        <!-- Paper 1 -->
+        <div id="p1" class="paper">
+            <div class="front">
+                <div id="f1" class="front-content">
+                    <h1>Front 1</h1>
+                </div>
+            </div>
+            <div class="back">
+                <div id="b1" class="back-content">
+                    <h1>Back 2</h1>
+                </div>
+            </div>
+        </div>
+        <!-- Paper 2 -->
+        <div id="p2" class="paper">
+            <div class="front">
+                <div id="f2" class="front-content">
+                    <h1>Front 2</h1>
+                </div>
+            </div>
+            <div class="back">
+                <div id="b2" class="back-content">
+                    <h1>Back 3</h1>
+                </div>
+            </div>
+        </div>
+        <!-- Paper 3 -->
+        <div id="p3" class="paper">
+            <div class="front">
+                <div id="f3" class="front-content">
+                    <h1>Front 3</h1>
+                </div>
+            </div>
+            <div class="back">
+                <div id="b3" class="back-content">
+                    <h1>Back 4</h1>
+                </div>
+            </div>
+        </div>
+        <!-- Paper 4 -->
+        <div id="p4" class="paper">
+            <div class="front">
+                <div id="f4" class="front-content">
+                    <h1>Front 4</h1>
+                </div>
+            </div>
+            <div class="back">
+                <div id="b4" class="back-content">
+                    <h1>Back 5</h1>
+                </div>
+            </div>
+        </div>
+        <!-- Paper 5 -->
+        <div id="p5" class="paper">
+            <div class="front">
+                <div id="f5" class="front-content">
+                    <h1>Front 5</h1>
+                </div>
+            </div>
+            <div class="back">
+                <div id="b5" class="back-content">
+                    <h1>Cover</h1>
+                </div>
+            </div>
+        </div>
+    </div>
 
-				<li class="album_item"><div class="album_texts"><h2>Hello Welcome 123</h2><h3>hi this is me</h3></div><img src="images/Joe.jpg" alt="img" class="album_img"></li>
-
-				<li class="album_item"><img src="images/Joe.jpg" alt="img" class="album_img"><div class="album_texts"><h2>Hello Welcome 123</h2><h3>hi this is me</h3></div></li>
-
-				<li class="album_itemL"><div class="album_texts"><h1>The End</h1><h3>That's all I got</h3></div></li>
-			</ul>
-		</div>
-
-		<a class="skip_slide">Skip this slide</a>
-
-		<video id="bg_vid" autobuffer="autobuffer" preload="preload">
-			<source src="videos/bg_vid.mp4" type="video/mp4">
-		</video>
-	</div>
-	<script src="jscripts/album.js"></script>
+    <!-- Next Button -->
+    <button id="next-btn">
+        <i class="fi fi-sr-caret-right"></i>
+    </button>
 </body>
 </html>

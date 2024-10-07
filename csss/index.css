@@ -9,13 +9,17 @@
 	padding: 0;
 }
 
-html, body{
+html{
 	height: 100%;
+	width: 100%;
 	margin: 0;
 	background-color: black;
+	overflow: hidden;
 }
 
 body{
+	height: 100%;
+	width: 100%;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -26,8 +30,6 @@ body{
 	width: 100vw;
 	height: 100vh;
 	margin:  0;
-	filter: blur(1px);
-    -webkit-filter: blur(1px);
     display: block;
     cursor: default;
     /* -webkit-touch-callout: none; */
@@ -188,14 +190,14 @@ li span{
 	white-space: nowrap;
 	letter-spacing: 5px;
 	overflow: hidden;
-	color: #005452;
+	color: lightgoldenrodyellow;
 /* 	background:  linear-gradient(darkolivegreen, brown, darkviolet, orange, white, green);
 	-webkit-background-clip: text;
 	background-clip: text;
 	-webkit-text-fill-color: transparent; */
 	text-shadow:
-	    0 0 7px #fff,
-	    0 0 18px #fff;
+	    0 0 5px #f3d0d7,
+	    0 0 18px #f3d0d7;
 	font-family: "Style Script", cursive;
 	font-weight: 600;
 	font-style: normal;
@@ -288,17 +290,21 @@ li span{
 	}
 }
 
-@media screen and (max-width: 800px){
+/* @media screen and (max-width: 800px){
+
+	body{
+		rotate: 90deg;
+	}
 
 	.container {
 		font-size: 0.7rem;
 	}
 
-}
+} */
 
 
 
-/* @media screen and (max-width: 600px){
+@media screen and (max-width: 600px){
 
 	html, body{
 		overflow: hidden;
@@ -317,8 +323,8 @@ li span{
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
+		font-size: 0.7rem;
 	}
 
 
 }
- */

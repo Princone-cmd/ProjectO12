@@ -1,8 +1,3 @@
-if(window.innerHeight > window.innerWidth){
-  alert("Please use Landscape!");
-}
-
-
 function randomInRange(min, max) {
   return Math.random() * (max - min) + min;
 }
@@ -39,7 +34,9 @@ function randomInRange(min, max) {
 			proceed = document.getElementById("proceedToPresentation"),
 			content = document.getElementById("content");
 
-			headline.innerText = "Happy Birthday\nCharan Cherry";
+			// headline.innerText = "Happy Birthday\nCharan Cherry";
+			headline.innerText = "Hello\nWorld";
+			
 			headline.style.fontSize = "450%";
 			headline.classList.add("type");
 
